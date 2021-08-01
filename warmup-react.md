@@ -1,6 +1,16 @@
 # The needed JS warm-up before Learn ReactJS | Modern JavaScript
 
-## Scope in JS
+- [The needed JS warm-up before Learn ReactJS | Modern JavaScript](#the-needed-js-warm-up-before-learn-reactjs--modern-javascript)
+  - [var, let and const](#var-let-and-const)
+  - [Objects](#objects)
+  - [The this Keyword](#the-this-keyword)
+  - [Arrow Functions](#arrow-functions)
+  - [Arrow Functions and this](#arrow-functions-and-this)
+  - [Array functions Map and filter](#array-functions-map-and-filter)
+  - [Object Destructuring](#object-destructuring)
+  - [Spread Operator](#spread-operator)
+
+## var, let and const
 
 - **Scope**
 
@@ -19,7 +29,6 @@
 
 // Variables declared with the var keyword can NOT have block scope.
 // Variables declared inside a { } block can be accessed from outside the block.
-
 
 // ___________________
 /* Function scope */
@@ -302,8 +311,8 @@ const moZanaty = {
   bio: 'A passionate teaching-lover, developer, writer, and autodidact.',
   funFact: 'I learned programming by chance 😭',
   address: {
-    city: 'Egypt'
-  }
+    city: 'Egypt',
+  },
 };
 
 const name = moZanaty.name;
@@ -329,10 +338,10 @@ const { name, job, bio } = moZanaty;
 // 3. Default Value
 // If the destructed object doesn’t have the property specified in the destructuring assignment,
 // then the variable is assigned with undefined.
-const { hasDog } = moZanaty; 
+const { hasDog } = moZanaty;
 const { hasDog = 'Default Dog Value' } = moZanaty;
 // 4. Alias
-// If you’d like to create variables of different names than the properties, 
+// If you’d like to create variables of different names than the properties,
 // then you can use the aliasing feature of object destructuring
 const { name: fullName } = moZanaty;
 // 5. Deep Property
@@ -341,7 +350,7 @@ const {
 } = moZanaty;
 // 6. Dynamic Property Name
 const { [propName]: identifier } = expression;
-// propName expression should evaluate to a property name (usually a string), 
+// propName expression should evaluate to a property name (usually a string),
 // the identifier should indicate the variable name created after the destructuring.
 // The second expression should evaluate to the object you’d like to destructur.
 
@@ -355,7 +364,7 @@ const { [prop]: name } = moZanaty; //=> Mohammed Elzanaty
 
 ## Spread Operator
 
-- spread operator allows you to spread out elements of an iterable object such as an array,a  map, or a set.
+- spread operator allows you to spread out elements of an iterable object such as an array,a map, or a set.
 
 ```javascript
 
@@ -368,9 +377,9 @@ let moZanaty = {
 };
 
 // 1. Copying an array
-    // let say we need to create copy a fruits array to a new array 
+    // let say we need to create copy a fruits array to a new array
     let newFruitArray = [...fruits]
-    
+
 // 2. Concatenating / Combined arrays
     let basket = [...fruits, ...vegetables]
 
